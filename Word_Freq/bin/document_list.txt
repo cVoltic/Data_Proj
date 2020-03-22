@@ -1,0 +1,3 @@
+/Users/ktrinh/Desktop/Word_Frequency_Complete/Word_Freq/src/raven.txt
+/Users/ktrinh/Desktop/Word_Frequency_Complete/Word_Freq/src/frankenstein.txt
+/Users/ktrinh/Desktop/Word_Frequency_Complete/Word_Freq/src/dracula.txt

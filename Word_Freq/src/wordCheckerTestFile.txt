@@ -1,0 +1,9 @@
+test test true
+word best false
+wing ding false
+what what true
+the the true
+end end true
+was not false
+long long true
+short array false
