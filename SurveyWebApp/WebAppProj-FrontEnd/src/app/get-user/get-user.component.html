@@ -1,0 +1,57 @@
+<table class ="table">
+  <tr>
+    <td> ID </td>
+    <td> Time Stamp </td>
+    <td> Name </td>
+    <td> Email </td>
+    <td> College </td>
+    <td> Degree </td>
+    <td> Role </td>
+    <td> Project </td>
+    <td> Client </td>
+    <td> Fact 1 </td>
+    <td> Fact 2 </td>
+  </tr>
+    <tr *ngFor = 'let user of users'>
+      <td>
+        {{user.id}}
+      </td>
+      <td>
+        {{user.timestamp}}
+      </td>
+      <td>
+        {{user.name}}
+      </td>
+      <td>
+        {{user.email}}
+      </td>
+      <td>
+        {{user.college}}
+      </td>
+      <td>
+        {{user.degree}}
+      </td>
+      <td>
+        {{user.role}}
+      </td>
+      <td>
+        {{user.project}}
+      </td>
+      <td>
+        {{user.client}}
+      </td>
+      <td>
+        {{user.fact1}}
+      </td>
+      <td>
+        {{user.fact2}}
+      </td>
+      <td> <button class = 'btn btn-info' (click)="updateUser()"> Update </button> </td>
+      <td> <button method='DELETE' class = 'btn btn-info' (click) = "deleteUser(user)"> Delete </button> </td>
+      
+
+    </tr>
+    <td> <button class = 'btn btn-info' (click)="addUser()"> Add </button> </td>
+
+
+  </table>

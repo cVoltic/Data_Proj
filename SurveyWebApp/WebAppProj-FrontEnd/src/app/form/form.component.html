@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row">
+        <div class="col s6">
+            <img src = '/assets/img/entechlogo.jfif' style ='widows: 120px;height: 120px;' class='offset-s3'>
+         </div>
+ 
+         
+             <h3>Survey</h3>
+         </div>
+         <div class="black-text">
+         
+             <form method='POST' #registerForm="ngForm"  *ngIf="!submitted" (ngSubmit)='onSubmit()' validate>
+                 <div class="container">
+                     <mat-form-field>
+                         <input type = 'text'  [(ngModel)]="user.name" name="Name" required>
+                         <label>Name</label>
+                     </mat-form-field>
+                 </div>
+
+                 <div class="container">
+                     <mat-form-field>
+                         <input type = 'text'  [(ngModel)]="user.email" name="Email" required>
+                         <label>Email</label>
+                     </mat-form-field>
+                 </div>
+
+                 <div class="container">
+                     <mat-form-field>
+                         <input type = 'text'  [(ngModel)]="user.college" class="form-control" name="College" required>
+                         <label>College</label>
+                     </mat-form-field>
+                 </div>
+                 
+                 <div class="container">
+                     <mat-form-field>
+                         <input type = 'text'  [(ngModel)]="user.degree" name="Degree" required>
+                         <label>Degree</label>
+                     </mat-form-field>
+                 </div>
+
+                                    
+                 <h5>Select Your Role</h5>
+                 <li *ngFor = 'let role of roleList' [value]='role'>
+                     {{role}}
+                 </li>
+                 <mat-form-field>
+                     <input type = 'text'  [(ngModel)]="user.role" name="Role" required>
+                     <label>Role</label>
+                 </mat-form-field>
+                 
+                 <h5>Select Your Project</h5>
+                 <li *ngFor = 'let project of projects' [value]='project.value'>
+                     {{project.value}}
+                 </li>
+                 <mat-form-field>
+                     <input type = 'text'  [(ngModel)]="user.project" name="Project" required>
+                     <label>Project</label>
+                 </mat-form-field>
+                 
+                 <h5>Select Your Client</h5>
+                 <li *ngFor = 'let client of clients' [value]='client.value'>
+                     {{client.value}}
+                 </li>
+                 <mat-form-field>
+                     <input type = 'text'  [(ngModel)]="user.client" name="Client" required>
+                     <label>Client</label>
+                 </mat-form-field>
+
+                 <div class="container">
+                     <mat-form-field>
+                         <input type = 'text'  [(ngModel)]="user.fact1" name="Fun Fact1" required>
+                         <label>Fun Fact 1</label>
+                     </mat-form-field>
+                 </div>
+                 <div class="container">
+                     <mat-form-field>
+                        <input type = 'text'  [(ngModel)]="user.fact2" name="Fun Fact2" required>
+                         <label>Fun Fact 2</label>
+                     </mat-form-field>
+                 </div>
+                 
+                 <div class='row'>
+                     <div class='input-field col s12'>
+                         <button class = 'btn-large btn-submit' type='submit'[disabled]='!registerForm.valid'>Submit</button>
+                     </div>
+                 </div>
+             </form>
+         
+        
+         
+         
+    </div>    
+</div>

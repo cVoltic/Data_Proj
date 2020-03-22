@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Login Page</title>
+</head>
+<body>
+	<form method="post" action="LoginController">
+		<table>
+			<tr>
+				<td>User Name</td>
+				<td><input type="text" name="uname"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="pass"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="login"></td>
+			</tr>
+		</table>
+	</form>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script type="text/javascript">
+			function sendEmail() {
+				Email.send({
+					Host : "smtp.gmail.com",
+					Username : "entech.surveycustodian@gmail.com",
+					Password : "Entech123",
+					To : "entech.surveycustodian@gmail.com",
+					From : "entech.surveycustodian@gmail.com",
+					Subject : "Password Retrieval",
+					Body : "Your password is: pwd"
+				}).then(function(message){
+					alert("email sent successully")
+				});
+			}
+		</script>
+	<form method="post">
+		<input type="button" value="Forgot Password" onclick="sendEmail()"/>
+	</form>
+</body> 
+
+</html>

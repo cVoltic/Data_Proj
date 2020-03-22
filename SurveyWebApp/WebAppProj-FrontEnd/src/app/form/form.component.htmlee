@@ -1,0 +1,13 @@
+<form #dropdown="ngForm">
+    <div>
+        <mat-form-field >
+            <mat-select type='text' [formControl] = 'roleControl'>
+                <mat-option value = "GradTech Team Member">GradTech Team Member</mat-option>
+                <mat-option value = "GradTech Lead">GradTech Lead</mat-option>
+                <mat-option value = "GradTech Program">GradTech Program</mat-option>
+                <mat-option value = "GradTech Program Trainer">GradTech Program Trainer</mat-option>
+            </mat-select>
+            
+        </mat-form-field>
+    </div>
+</form>
