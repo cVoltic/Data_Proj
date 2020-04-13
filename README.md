@@ -10,3 +10,4 @@ General repository for little data science/engineering projects experimentation.
 4. JupyterNotebook - Small Machine Learning Experimenation
 5. PythonExp - Small pythons script experimenation
 
+# Fair Use Policy
