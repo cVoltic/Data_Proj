@@ -1,3 +1,5 @@
+import {MatSelectModule} from '@angular/material/select';
+
 import { Component, OnInit, Input } from '@angular/core';
 
 import { SurveyService } from "./survey/survey.service";
@@ -8,7 +10,8 @@ import { Router } from '@angular/router';
 import {User} from './user';
 
 interface Roles{
-  value: string; 
+  value: string;
+  viewValue: string; 
 }
 interface Projects{
   value: string;
@@ -26,8 +29,6 @@ interface Clients{
 export class FormComponent implements OnInit {
   
   user: User; 
-  
-  
   roleControl: FormControl = new FormControl();
   projectControl: FormControl = new FormControl();
   clientControl: FormControl = new FormControl();
@@ -39,6 +40,14 @@ export class FormComponent implements OnInit {
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+W\.[a-z]{2,4}$";
   
   roleList: string[] = ['GradTech Team Member', 'GradTech Lead', 'GradTech Program Member/Trainer'];
+  //role='None';
+  
+  /*role: Roles[] = [
+    {value: 'GradTech-Tech-Team-Member-0', viewValue: 'GradTech Team Member'},
+    {value: 'GradTech-Lead-1', viewValue: 'GradTech Lead'},
+    {value: 'GradTech-Trainer-2', viewValue: 'GradTech Trainer'}
+  ];*/
+  
   projects: Projects[] = [{value:'Barclay-Developement'},
                        {value:'Barclay-QA'},
                        {value:'Barclays-Tech Triage'},

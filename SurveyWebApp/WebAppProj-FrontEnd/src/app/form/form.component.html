@@ -40,6 +40,15 @@
 
                                     
                  <h5>Select Your Role</h5>
+                 <!--<mat-form-field>
+                     <mat-label>Select Role</mat-label>
+                     <mat-select [(value)]="role">
+                         <mat-option>None</mat-option>
+                         <mat-option value="option1">Gradtech Lead</mat-option>
+                         <mat-option value="option2">Gradtech Member</mat-option>
+                         <mat-option value="option3">Gradtech Trainer</mat-option>
+                     </mat-select>
+                 </mat-form-field>-->
                  <li *ngFor = 'let role of roleList' [value]='role'>
                      {{role}}
                  </li>
