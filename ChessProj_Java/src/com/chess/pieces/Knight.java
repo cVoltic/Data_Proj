@@ -32,7 +32,8 @@ public class Knight extends Piece{
 			
 			//get the new coordinate of the piece
 			final int candidateDestinationCoordinate = this.piecePosition + currentCandidateOffset;
-		
+			
+			//Checking column spaces
 			if(BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
 				if(isFirstColumnExclusion(this.piecePosition, currentCandidateOffset) ||
 						isSecondColumnExclusion(this.piecePosition, currentCandidateOffset) ||
