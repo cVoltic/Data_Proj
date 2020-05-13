@@ -49,8 +49,8 @@ public class Bishop extends Piece{
 				if(BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
 					final Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
 					//Check to see if the tile is already occupied
+					//if not occupied -> then this is a legal move
 					if(!candidateDestinationTile.isTileOccupied()) {
-						//if not occupied -> then this is a legal move
 						legalMoves.add(new MajorMove(board, this, candidateDestinationCoordinate));
 					} else {
 						//if occupied, check to see the piece alliance and capture if necessary
