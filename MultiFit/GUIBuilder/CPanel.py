@@ -8,7 +8,8 @@ Last edited: 11-20-2019
 '''
 
 
-#import pages
+#import DataPlotter Class
+#TODO: move DataPlotter to desginated module folder
 from DataPlotter import *
 
 class CPanel(tk.Frame):

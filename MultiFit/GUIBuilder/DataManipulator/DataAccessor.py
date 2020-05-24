@@ -1,5 +1,6 @@
 '''
 Data Import Module
+
 Created on: 11-12-2019
 Last edited: 11-20-2019
 
@@ -33,8 +34,8 @@ class DataAccessor():
 		return self.__data
 		
 	#import data file
+	#TODO: readability improvement
 	def readData(self):
-	
 		self.__data = filedialog.askopenfilename(initialdir = "/",title = "Select file",filetypes = (("text files","*.txt"),("all files","*.*")))
 		inputFile = open(self.__data, 'r')
 		return inputFile
@@ -45,6 +46,7 @@ class DataAccessor():
 		return outputFile
 		
 '''	
+#Uncomment for Testing
 if __name__ == "__main__":
 	testData = DataAccessor("TestData.txt")
 	#testData.changeType("dat")
